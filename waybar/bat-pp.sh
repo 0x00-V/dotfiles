@@ -33,4 +33,4 @@ else
   ICON=""
 fi
 
-printf '{"text": "%s %s%%", "class": "%s", "alt": "%s"}\n' "$ICON" "$PERCENT" "$CLASS" "$STATE"
+printf '{"text": "%s %s", "class": "%s", "alt": "%s"}\n' "$ICON" "$PERCENT" "$CLASS" "$STATE"
