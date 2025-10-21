@@ -9,7 +9,6 @@ fi
 PERCENT=$(upower -i "$BATTERY" | awk '/percentage/ {print $2}' | tr -d '%')
 STATE=$(upower -i "$BATTERY" | awk '/state/ {print $2}')
 
-# Class for styling
 if [[ $STATE == "charging" ]]; then
   CLASS="charging"
 elif [[ $PERCENT -le 10 ]]; then
@@ -20,7 +19,6 @@ else
   CLASS="normal"
 fi
 
-# Icon set
 if [[ $PERCENT -ge 90 ]]; then
   ICON=""
 elif [[ $PERCENT -ge 70 ]]; then
