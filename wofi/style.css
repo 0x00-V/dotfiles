@@ -1,0 +1,77 @@
+@define-color    text      #cad3f5;
+@define-color    subtext   #a5adcb;
+@define-color    sky       #91d7e3;
+@define-color    sapphire  #7dc4e4;
+@define-color    blue      #8aadf4;
+@define-color    lavender  #b7bdf8;
+@define-color    base      #24273a;
+@define-color    mantle    #1e2030;
+@define-color    crust     #181926;
+
+* {
+  font-family: 'Inconsolata Nerd Font', monospace;
+  font-size: 14px;
+}
+
+window {
+  margin: 0px;
+  padding: 10px;
+  border: 0.16em solid @blue;
+  border-radius: 0.1em;
+  background-color: @base;
+  animation: slideIn 0.5s ease-in-out both;
+}
+@keyframes slideIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+#inner-box, #outer-box, #scroll {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background-color: @base;
+}
+#inner-box {
+  animation: fadeIn 0.5s ease-in-out both;
+}
+#input {
+  margin: 5px 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 0.1em;
+  color: @text;
+  background-color: @base;
+  animation: fadeIn 0.5s ease-in-out both;
+}
+#input image {
+    border: none;
+    color: @sky;}
+#input * {
+  outline: 4px solid @sapphire!important;}
+#text {
+  margin: 5px;
+  border: none;
+  color: @text;
+  animation: fadeIn 0.5s ease-in-out both;
+}
+
+#entry {
+  background-color: @base;
+}
+
+#entry arrow {
+  border: none;
+  color: @sapphire;
+}
+
+/* Selected Entry */
+#entry:selected {
+  border: 0.11em solid @sky; 
+  background-color: @mantle;
+}
+
+#entry:selected #text {
+  color: @blue; 
+}
+
+#entry:drop(active) {
+  background-color: @blue!important;
+}
